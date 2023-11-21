@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/addr",
+    "crates/add_one",
+    "crates/add_two",
+]
+
+
+#[workspace.dependencies]
+#[workspace.dependencies.add_one]
+#[workspace.dependencies.add_two]
