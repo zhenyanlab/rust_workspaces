@@ -3,7 +3,7 @@ resolver = "2"
 members = [
     "crates/addr",
     "crates/add_one",
-    "crates/add_two",
+    "crates/add_two", "crates/maco",
 ]
 
 
