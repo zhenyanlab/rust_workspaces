@@ -26,10 +26,16 @@ pub fn derive_builder(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
     let ident = input.ident;
     let ident_builder = Ident::new(&format!("{}Builder", ident), ident.span());
-
+    let m_test_f= Ident::new(&format!("m_test_{}", ident), ident.span());
+    println!("mm-m_test_f:{}",m_test_f);
     println!("mm-ident:{}",ident);
     println!("mm-ident_builder:{}",ident_builder);
     quote!(
+
+        pub fn #m_test_f() {
+            println!("{}","m_test");
+        }
+
         pub struct #ident_builder{};
         impl #ident_builder {
             pub fn builder() -> #ident {
